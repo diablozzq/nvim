@@ -41,7 +41,6 @@ nnoremap <RightMouse> "+p
 " Apparently this keybindig has issues with regular windows terminal
 " Works in mobaxterm
 
-
 "
 " # search backword for word under cursor * search forward for word under
 " cursor

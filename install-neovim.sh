@@ -2,15 +2,15 @@
 # Once neovim 5 hits repo,
 # sudo apt install neovim
 # Just run out of the ./bin/nvim path and add that folder to path
+# mkdir -p ~/.config/nvim && git clone https://github.com/diablozzq/nvim ~/.config && ~/.config/nvim/install-neovim.sh
+mkdir -p ~/.local/bin
 wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim-linux64.tar.gz -O /tmp/nvim.tar.gz
-mkdir -p ~/bin
-tar -xzf /tmp/nvim.tar.gz -C ~/bin/
-mkdir -p ~/.config/nvim
-export PATH="$PATH:$HOME/bin/nvim-linux64/bin"
-echo 'export PATH="$PATH:$HOME/bin/nvim-linux64/bin"' >> ~/.bashrc
+tar -xzf /tmp/nvim.tar.gz -C ~/.local/bin
+rm -f /tmp/nvim.tar.gz
+export PATH="$PATH:$HOME/.local/bin/nvim-linux64/bin"
+echo 'export PATH="$PATH:$HOME/.local/bin/nvim-linux64/bin"' >> ~/.bashrc
 
-ln -s /mnt/c/Users/morla/OneDrive/Notes/init.vim ~/.config/nvim/init.vim
-ln -s /mnt/c/Users/morla/OneDrive/Notes/.zshrc ~/.zshrc
+cp ~/.config/nvim/.zshrc ~/.zshrc
 
 #scp /mnt/c/Users/morla/OneDrive/Notes/init.vim mininet@192.168.111.129:~/.config/nvim/
 sudo apt install -y git gcc unzip rsync npm nodejs ripgrep zsh
@@ -28,6 +28,7 @@ nvim -c ':PlugInstall'
 nvim -c ':TSInstall all'
 
 ## WSL2 config
+## Don't have to do on Ubuntu WSL - already installed
 
 # Win32 yank to fix WSL copy paste
 #curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
