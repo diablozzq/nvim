@@ -2,7 +2,7 @@
 # Once neovim 5 hits repo,
 # sudo apt install neovim
 # Just run out of the ./bin/nvim path and add that folder to path
-# mkdir -p ~/.config/nvim && git clone https://github.com/diablozzq/nvim ~/.config && ~/.config/nvim/install-neovim.sh
+# mkdir -p ~/.config ; git clone https://github.com/diablozzq/nvim ~/.config/nvim ; ~/.config/nvim/install-neovim.sh
 mkdir -p ~/.local/bin
 wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim-linux64.tar.gz -O /tmp/nvim.tar.gz
 tar -xzf /tmp/nvim.tar.gz -C ~/.local/bin
