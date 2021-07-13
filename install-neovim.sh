@@ -24,8 +24,8 @@ sudo npm install -g n
 sudo n stable
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-nvim -c ':PlugInstall'
-nvim -c ':TSInstall all'
+nvim --headless +PlugInstall +qall
+nvim --headless +TSInstall +qall
 
 ## WSL2 config
 ## Don't have to do on Ubuntu WSL - already installed
